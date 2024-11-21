@@ -1,41 +1,129 @@
 .chat-container {
-  max-width: 600px;
-  margin: 50px auto;
-  font-family: Arial, sans-serif;
-  text-align: left;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+h1 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .messages {
-  border: 1px solid #ccc;
-  padding: 10px;
-  height: 300px;
+  flex: 1;
   overflow-y: auto;
-  margin-bottom: 20px;
-  background: #f9f9f9;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.message {
+  max-width: 80%;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+.message-user {
+  align-self: flex-end;
+  background: #4299e1;
+  color: white;
+}
+
+.message-bot {
+  align-self: flex-start;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sender {
+  font-size: 0.875rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.message p {
+  margin: 0;
+  line-height: 1.5;
 }
 
 .input-area {
+  padding: 1.5rem;
+  border-top: 1px solid #eee;
   display: flex;
+  gap: 1rem;
 }
 
 input {
   flex: 1;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4299e1;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  background-color: #007bff;
+  padding: 0.75rem 1.5rem;
+  background: #4299e1;
   color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  border-radius: 4px;
+  transition: background 0.2s;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background: #3182ce;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar styling */
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 3px;
 }

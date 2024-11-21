@@ -1,20 +1,19 @@
-import { HttpClientModule } from '@angular/common/http'; // Required for HTTP requests
+import { provideHttpClient } from '@angular/common/http'; // Provide HttpClient
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // Required for [(ngModel)]
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent, // Declare AppComponent
+    AppComponent, // Declare the root component
   ],
   imports: [
-    BrowserModule, // Required for Angular applications
-    FormsModule, // Required for [(ngModel)]
-    HttpClientModule, // Required for backend communication
+    BrowserModule, // Core Angular module for browser apps
   ],
-  providers: [],
-  bootstrap: [AppComponent], // Bootstraps AppComponent
+  providers: [
+    provideHttpClient(), // Provide HttpClient with the new configuration
+  ],
+  bootstrap: [AppComponent], // Bootstrap the main component
 })
 export class AppModule {}

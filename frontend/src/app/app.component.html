@@ -1,15 +1,25 @@
 <div class="chat-container">
-  <h1>AI Chat Assistant</h1>
+  <div class="chat-header">
+    <h1>AI Assistant</h1>
+  </div>
+
   <div class="messages">
-    <!-- This *ngFor loop renders messages -->
-    <div *ngFor="let msg of messages">
-      <p>
-        <strong>{{ msg.user }}:</strong> {{ msg.text }}
-      </p>
+    <div
+      *ngFor="let message of messages"
+      [ngClass]="{
+        'message-user': message.sender === 'You',
+        'message-bot': message.sender === 'Bot'
+      }"
+      class="message"
+    >
+      <div class="message-content">
+        <span class="sender">{{ message.sender }}</span>
+        <p>{{ message.text }}</p>
+      </div>
     </div>
   </div>
+
   <div class="input-area">
-    <!-- [(ngModel)] is for two-way data binding -->
     <input
       type="text"
       [(ngModel)]="userMessage"
