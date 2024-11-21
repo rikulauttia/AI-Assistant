@@ -3,3 +3,8 @@ venv/
 
 # Ignore data folder
 data/
+
+chatbot_model.h5
+
+*.zip  # Excludes zip files (like `cornell_movie_dialogs_corpus.zip`)
+.vscode/
