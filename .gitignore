@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+
+# Angular specific
+.angular/
+dist/
+/tmp/
+/out-tsc/
+
+# Python specific
+__pycache__/
+*.py[cod]
+*.so
+
+# Project files
+*.h5
+*.pkl
+data/
+*.zip
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
