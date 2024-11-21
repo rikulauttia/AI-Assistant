@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  font-family: Arial, sans-serif;
 }
 
 .messages {
@@ -26,4 +27,13 @@ input {
 button {
   margin-left: 10px;
   padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }

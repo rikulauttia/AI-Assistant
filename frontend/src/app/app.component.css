@@ -1,11 +1,41 @@
-.app-container {
-  text-align: center;
-  margin: 20px;
+.chat-container {
+  max-width: 600px;
+  margin: 50px auto;
   font-family: Arial, sans-serif;
+  text-align: left;
 }
 
-h1 {
-  font-size: 24px;
-  color: #333;
+.messages {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
   margin-bottom: 20px;
+  background: #f9f9f9;
+}
+
+.input-area {
+  display: flex;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
 }

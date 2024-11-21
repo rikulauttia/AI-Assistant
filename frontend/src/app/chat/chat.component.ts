@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-chat',
+  selector: 'app-chat', // Correct selector with quotes
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css'],
 })

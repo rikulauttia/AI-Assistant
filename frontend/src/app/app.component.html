@@ -1,4 +1,21 @@
-<div class="app-container">
-  <h1>AI-Powered Conversational Assistant</h1>
-  <app-chat></app-chat>
+<div class="chat-container">
+  <h1>AI Chat Assistant</h1>
+  <div class="messages">
+    <!-- This *ngFor loop renders messages -->
+    <div *ngFor="let msg of messages">
+      <p>
+        <strong>{{ msg.user }}:</strong> {{ msg.text }}
+      </p>
+    </div>
+  </div>
+  <div class="input-area">
+    <!-- [(ngModel)] is for two-way data binding -->
+    <input
+      type="text"
+      [(ngModel)]="userMessage"
+      placeholder="Type your message..."
+      (keydown.enter)="sendMessage()"
+    />
+    <button (click)="sendMessage()">Send</button>
+  </div>
 </div>
