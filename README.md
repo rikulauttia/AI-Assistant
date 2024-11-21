@@ -111,6 +111,7 @@ firebase deploy --only functions
 
 ## Project Structure
 
+```bash
 AI-Assistant/
 ├── backend/ # Backend files
 │ ├── venv/ # Virtual environment (ignored by .gitignore)
@@ -124,6 +125,7 @@ AI-Assistant/
 │ └── angular.json # Angular config
 ├── .gitignore # Ignored files
 └── README.md # Project documentation
+```
 
 ## License
 
