@@ -59,13 +59,13 @@ git clone https://github.com/rikulauttia/AI-Assistant.git
 cd AI-Assistant
 ```
 
-### \*\*2. Install Required Libraries
+### **2. Install Required Libraries**
 
 ```bash
 pip install tensorflow keras flask flask-cors pandas numpy scikit-learn
 ```
 
-### \*\*3. Train the AI Model
+### **3. Train the AI Model**
 
 Add your dataset to the data folder.
 Run the training script:
@@ -76,7 +76,7 @@ python train_model.py
 
 The trained model (chatbot_model.h5) will be saved in the backend folder.
 
-### \*\*4. Start the Flask Backend
+### **4. Start the Flask Backend**
 
 ```bash
 python app.py
@@ -84,7 +84,7 @@ python app.py
 
 ## Frontend: Angular Chat Interface
 
-### \*\*Set Up the Frontend
+### **Set Up the Frontend**
 
 ```bash
 cd frontend
@@ -96,7 +96,7 @@ Access the frontend at http://localhost:4200.
 
 ## Firebase: Backend Services
 
-### \*\*Initialize Firebase
+### **Initialize Firebase**
 
 ```bash
 firebase login
