@@ -1,11 +1,12 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from tensorflow.keras.models import load_model
 import numpy as np
 import tensorflow as tf
 import pickle
 
 app = Flask(__name__)
-
+CORS(app)  # Enable CORS for all routes
 # Load the trained model
 model = load_model('chatbot_model.h5')
 
