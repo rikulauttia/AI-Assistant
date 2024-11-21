@@ -1,0 +1,11 @@
+.app-container {
+  text-align: center;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
